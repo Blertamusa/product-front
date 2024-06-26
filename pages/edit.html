@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Product</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <style>
+        .navbar-custom {
+            background-color: #4CAF50;
+        }
+
+        .navbar-brand {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        .nav-link {
+            color: #4CAF50;
+        }
+
+        .nav-link:hover {
+            color: #4CAF50;
+        }
+
+
+        body {
+            background-color: #f8f9fa;
+        }
+
+        nav.navbar {
+            background-color: #4CAF50;
+        }
+
+        .navbar-brand,
+        .navbar-nav .nav-link {
+            color: #4CAF50;
+        }
+
+        .navbar-brand:hover,
+        .navbar-nav .nav-link:hover {
+            color: #4CAF50;
+        }
+
+        .navbar-light .navbar-toggler-icon {
+            background-color: #4CAF50;
+        }
+
+        .card {
+            margin-top: 50px;
+            border: 0;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            background-color: #4CAF50;
+            color: #ffffff;
+            text-align: center;
+            border-radius: 15px 15px 0 0;
+            font-size: 24px;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background-color: #4CAF50;
+            border: none;
+            width: 100%;
+        }
+
+        .btn-primary:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            max-width: 960px;
+        }
+
+        .icon-link>.bi {
+            width: .75em;
+            height: .75em;
+        }
+
+        .product-header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .product-title {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .product-description {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .product-table-container {
+            margin: 20px;
+        }
+
+        .product-table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .product-table th,
+        .product-table td {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .product-table th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .product-table tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .site-header {
+            background-color: rgba(0, 0, 0, .85);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            backdrop-filter: saturate(180%) blur(20px);
+        }
+
+        .site-header a {
+            color: #8e8e8e;
+            transition: color .15s ease-in-out;
+        }
+
+        .site-header a:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .product-device {
+            position: absolute;
+            right: 10%;
+            bottom: -30%;
+            width: 300px;
+            height: 540px;
+            background-color: #333;
+            border-radius: 21px;
+            transform: rotate(30deg);
+        }
+
+        .product-device::before {
+            position: absolute;
+            top: 10%;
+            right: 10px;
+            bottom: 10%;
+            left: 10px;
+            content: "";
+            background-color: rgba(255, 255, 255, .1);
+            border-radius: 5px;
+        }
+
+        .product-device-2 {
+            top: -25%;
+            right: auto;
+            bottom: 0;
+            left: 5%;
+            background-color: #e5e5e5;
+        }
+
+        .flex-equal>* {
+            flex: 1;
+        }
+
+        @media (min-width: 768px) {
+            .flex-md-equal>* {
+                flex: 1;
+            }
+
+            .btn-green-primary {
+                color: #fff;
+                background-color: #28a745;
+                border-color: #218838;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="../logo/icons8-product-100.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a id="productPage" class="nav-link" href="../pages/product.html">Products</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+    <div class="text-center">
+        <h1>Add Product</h1>
+    </div>
+
+    <div class="container mt-5">
+        <form>
+            <div class="form-group">
+                <label for="productName">Product Name</label>
+                <input type="text" class="form-control" id="productName" placeholder="Enter product name">
+            </div>
+
+            <div class="form-group">
+                <label for="productDescription">Product Description</label>
+                <textarea class="form-control" id="productDescription" rows="3"
+                    placeholder="Enter product description"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input type="number" class="form-control" id="price" placeholder="Enter price">
+            </div>
+
+            <div class="form-group">
+                <label for="status">Status</label>
+                <select class="form-control" id="status">
+                    <option value="available">Available</option>
+                    <option value="outOfStock">Out of Stock</option>
+                    <option value="preOrder">Pre-order</option>
+                </select>
+            </div>
+            <div id="actions">
+                <button type="add" class="btn btn-green-primary" id="btnAdd">Add</button>
+                <button type="button" class="btn btn-danger" id="btnCancel">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+  
+    <script src="../js/edit-product.js"></script>
+    <script src="../js/model-product.js"></script>
+    <script src="../js/api-product.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
